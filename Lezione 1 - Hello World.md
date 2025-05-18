@@ -1,7 +1,7 @@
 Data: 18/05/2025
 Video: https://www.youtube.com/watch?v=HjXBXBgfKyk&t=1s
 
-scrivo file *hello_world.c*
+scrivo il file *hello_world.c*
 ```c
 #include <stdio.h>
 
@@ -15,7 +15,8 @@ compilo con cc
 cc hello_world.c
 ```
 
-- [i] cc è il collegamento al compilatore predefinito quindi in pratica spesso è un link a gcc. gcc è il compilatore di GNU
+>[!info] 
+>cc è il collegamento al compilatore predefinito quindi in pratica spesso è un link a gcc. gcc è il compilatore di GNU
 
 con `cc -S` vedo traduzione in assembly (utile per capire i livelli di ottimizzazione).
 
@@ -26,11 +27,13 @@ es se lancio `cc -02 -S hello_world.c` vedo che l'assembly, oltre ad avere molte
 Tra l'altro puts aggiunge da sola il newline (mentre con printf lo devo aggiungere io), infatti nell'assembly generato da compilatore ha rimosso la newline.
 > Il fatto che un compilatore maturo manipoli l'input se necessario è molto interessante
 
-*Consultare il manuale*
+*Consultare il manuale*  
+
 ```man <function>``` per consultare il manuale gnu
 ```man 3 <function>``` per consultare il manuale c
 
-*Vediamo hello_world.c riga per riga*
+*Vediamo hello_world.c riga per riga*  
+
 > in ogni riga succedono molte più cose di ciò che si possa pensare
 
 Le direttive del processore di c iniziano con il `#`. Sono delle righe "a parte" che vengono gestite dal pre-processore, un programma (spesso parte del compilatore) che effettua delle trasformazioni necessarie per il compilatore prima della compilazione.
@@ -42,7 +45,9 @@ I files c possono avere estensione:
 * `.c`, sono i programmi effettivi
 * `.h`, che è sempre codice sorgente c ma che contiene elementi di contorno che io posso dover includere in diversi programmi .c attraverso il preprocessore
 
-- [I] possiamo includere anche files `.c` in un `.c`!
+>[!Info]
+>possiamo includere anche files `.c` in un `.c`!  
+
 es scrivo file.c
 *file.c*
 ```c
